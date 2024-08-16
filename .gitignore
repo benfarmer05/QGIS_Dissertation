@@ -141,14 +141,14 @@ output
 #misc
 misc
 
-# # QGIS files
-# *.qgs
-# *.qgz
-# *.qgd
-# *.qgk
-# *.qga
-# *.qgc
-# *.qgi
-# *.qgt
-# *.qgz.aux.xml
-# *.qgz.xml
+# QGIS files
+*.qgs
+*.qgz
+*.qgd
+*.qgk
+*.qga
+*.qgc
+*.qgi
+*.qgt
+*.qgz.aux.xml
+*.qgz.xml
