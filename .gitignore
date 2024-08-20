@@ -152,3 +152,6 @@ misc
 *.qgt
 *.qgz.aux.xml
 *.qgz.xml
+
+#DS store
+.DS_Store
