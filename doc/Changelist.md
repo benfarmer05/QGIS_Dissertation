@@ -59,3 +59,11 @@ Net over BVI:
 270100.0000,378100.0000,2065950.0000,2127150.0000 [EPSG:26920]
 
 376700.0000,401900.0000,2005500.0000,2065950.0000 [EPSG:26920]
+
+
+Update 26 Sep 2024:
+Freaked out after MacOS Sequoia update broke some things in my spatial R set-up, so I uninstalled MacPorts and QGIS completely.
+This may not have been smart.
+Once it is (hopefully) sucessfully reinstalled on the new OS, which has some dependency issues with MacPorts (and MacPorts is required
+to have access to the newest GDAL versions, so I can't avoid using it to properly load geodatabases), I may have to set up all my preferences
+in QGIS again. This includes the plug-in that loaded stuff like NOAA /ESRI ocean basebamps, and also the benthic terrain modeler plug-in
