@@ -67,3 +67,10 @@ This may not have been smart.
 Once it is (hopefully) sucessfully reinstalled on the new OS, which has some dependency issues with MacPorts (and MacPorts is required
 to have access to the newest GDAL versions, so I can't avoid using it to properly load geodatabases), I may have to set up all my preferences
 in QGIS again. This includes the plug-in that loaded stuff like NOAA /ESRI ocean basebamps, and also the benthic terrain modeler plug-in
+
+Update 17 Oct 2024:
+- Installing QGIS from the regular launcher for MacOS, after already having QGIS installed using MacPorts with latest updates and upgrades, seemed to somehow do the trick. QGIS 3.38.3-Grenoble is opening properly, with all latest GDAL, PROJ, and GEOS. Woo!
+- Now I'm making sure I can load the geodatabase properly again
+- Okay now I am realizing this didn't actually work and MacPorts never finished properly installing QGIS. Ugh. GDAL drivers are still out of date so loading the geodatabase is messed up again
+- So I am working to install via MacPorts again - which may still be broken with MacOS Sequoia
+- In the meantime, can try working with original Dan VI_Shapes bathy?
