@@ -74,3 +74,73 @@ Update 17 Oct 2024:
 - Okay now I am realizing this didn't actually work and MacPorts never finished properly installing QGIS. Ugh. GDAL drivers are still out of date so loading the geodatabase is messed up again
 - So I am working to install via MacPorts again - which may still be broken with MacOS Sequoia
 - In the meantime, can try working with original Dan VI_Shapes bathy?
+
+
+--->  Fetching archive for libvpx
+--->  Attempting to fetch libvpx-1.13.1_0.darwin_24.arm64.tbz2 from https://packages.macports.org/libvpx
+--->  Attempting to fetch libvpx-1.13.1_0.darwin_24.arm64.tbz2 from https://ywg.ca.packages.macports.org/mirror/macports/packages/libvpx
+--->  Attempting to fetch libvpx-1.13.1_0.darwin_24.arm64.tbz2 from http://bos.us.packages.macports.org/libvpx
+--->  Fetching distfiles for libvpx
+--->  Verifying checksums for libvpx
+--->  Extracting libvpx
+--->  Applying patches to libvpx
+--->  Configuring libvpx
+Error: libvpx cannot be built while gtest is active.
+Error: Please forcibly deactivate gtest, e.g. by running:
+Error: 
+Error:     sudo port -f deactivate gtest
+Error: 
+Error: Then try again. You can reactivate gtest again later.
+Error: Failed to configure libvpx: gtest is active
+Error: See /opt/local/var/macports/logs/_opt_local_var_macports_sources_rsync.macports.org_macports_release_tarballs_ports_multimedia_libvpx/libvpx/main.log for details.
+Error: Follow https://guide.macports.org/#project.tickets if you believe there
+is a bug.
+Error: Processing of port qgis3 failed
+--->  Some of the ports you installed have notes:
+  hdf5 has the following notes:
+    Mac users may need to set the environment variable "HDF5_USE_FILE_LOCKING"
+    to the five-character string "FALSE" when accessing network mounted files.
+    This is an application run-time setting, not a configure or build setting.
+    Otherwise errors such as "unable to open file" or "HDF5 error" may be
+    encountered.
+  leveldb has the following notes:
+    Before version 1.23 leveldb has RTTI and a lot of code uses typeid. Version
+    1.23 disables RTTI which lead to broken things from plyvel to ceph. We
+    re-enable RTTI by default, if you wish to disable it switch off rtti variant
+    by:
+       port upgrade --enforce-variants leveldb -rtti
+    Before version 1.21 leveldb exposed helpers/memenv/memenv.h and some code
+    uses it. Version 1.21 prevent that which lead to broken things like
+    qtwebkit. We re-enable exposing memenv by default, if you wish to disable it
+    switch off memenv variant by:
+       port upgrade --enforce-variants leveldb -memenv
+  openssl11 has the following notes:
+    This is the last release of OpenSSL 1.1. No further public security updates
+    will be provided. Please migrate to the openssl3 port.
+  py311-pygments has the following notes:
+    To make the Python 3.11 version of Pygments the one that is run when you
+    execute the commands without a version suffix, e.g. 'pygmentize', run:
+    
+    port select --set pygments py311-pygments
+  py312-fonttools has the following notes:
+    To make the Python 3.12 version of fonttools the one that is run when you
+    execute the commands without a version suffix, e.g. 'fonttools', run:
+    
+        sudo port select --set fonttools fonttools-312
+  py312-pygments has the following notes:
+    To make the Python 3.12 version of Pygments the one that is run when you
+    execute the commands without a version suffix, e.g. 'pygmentize', run:
+    
+    port select --set pygments py312-pygments
+  py312-virtualenv has the following notes:
+    The executable is installed as '/opt/local/bin/virtualenv-3.12'. To symlink
+    it to '/opt/local/bin/virtualenv', run:
+    
+        sudo port select --set virtualenv virtualenv312
+  python27 has the following notes:
+    To make this the default Python or Python 2 (i.e., the version run by the
+    'python' or 'python2' commands), run one or both of:
+    
+        sudo port select --set python python27
+        sudo port select --set python2 python27
+benja@Benjamins-MacBook-Pro-4 ~ % 
